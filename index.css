@@ -4,6 +4,7 @@ body {
 
 .container {
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
 }
@@ -11,7 +12,7 @@ body {
 .childDiv {
     /* using css variables */
     width: var(--cell-size);
-    height: 50px;
+    height: var(--cell-size);
     box-sizing: border-box;
 }
 
