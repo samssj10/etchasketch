@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.childDiv {
+    /* using css variables */
+    width: var(--cell-size);
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.childDiv:hover {
+    background-color: red;
+    border: 2px solid black;
+}
