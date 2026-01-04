@@ -19,6 +19,7 @@ containerDiv.addEventListener("mouseover", (e) => {
       "--randomRgbValue",
       generateRandomRgbValue()
     );
+    containerDiv.style.setProperty("--brightnessValue", getBrightnessValue());
   }
 });
 
@@ -33,10 +34,19 @@ function buildGrid(gridSize) {
   }
 }
 
+let brightness = 100;
+
 function generateRandomRgbValue() {
   const r = Math.floor(Math.random() * 255);
   const g = Math.floor(Math.random() * 255);
   const b = Math.floor(Math.random() * 255);
-  console.log(`rgb(${r},${g},${b})`);
   return `rgb(${r},${g},${b})`;
+}
+
+function getBrightnessValue() {
+  if (brightness === 0) {
+    brightness = 100;
+  }
+  brightness -= 10;
+  return `${brightness}%`;
 }

@@ -21,6 +21,7 @@ body {
 
 .childDiv:hover {
     background-color: var(--randomRgbValue);
+    filter: brightness(var(--brightnessValue));
 }
 
 .popup {
