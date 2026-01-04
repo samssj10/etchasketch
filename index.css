@@ -20,7 +20,7 @@ body {
 }
 
 .childDiv:hover {
-    background-color: red;
+    background-color: var(--randomRgbValue);
 }
 
 .popup {

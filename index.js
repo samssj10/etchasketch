@@ -13,6 +13,15 @@ popupButton.addEventListener("click", () => {
   buildGrid(gridSize);
 });
 
+containerDiv.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("childDiv")) {
+    containerDiv.style.setProperty(
+      "--randomRgbValue",
+      generateRandomRgbValue()
+    );
+  }
+});
+
 function buildGrid(gridSize) {
   containerDiv.replaceChildren();
   for (let i = 1; i <= gridSize; i++) {
@@ -22,4 +31,12 @@ function buildGrid(gridSize) {
       containerDiv.appendChild(childDiv);
     }
   }
+}
+
+function generateRandomRgbValue() {
+  const r = Math.floor(Math.random() * 255);
+  const g = Math.floor(Math.random() * 255);
+  const b = Math.floor(Math.random() * 255);
+  console.log(`rgb(${r},${g},${b})`);
+  return `rgb(${r},${g},${b})`;
 }
